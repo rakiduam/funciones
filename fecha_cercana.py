@@ -3,10 +3,11 @@ import pandas as pd
 from datetime import datetime
 
 
-def cercana(fecha_buscar, lista_donde):
+def fecha_cercana(fecha_buscar, lista_donde):
     """
     fecha_buscar: fecha en formato YYYYmmdd , cualquier otra cosa es necesario preprocesar
     lista_donde: listado de fechas en el mismo formato YYYYmmdd ej: 20201231
+    devuelve el valor mas cercano de la fecha que se esta buscando
     """
     fecha_buscar = datetime(int(fecha_buscar[:4]), int(fecha_buscar[4:6]), int(fecha_buscar[6:]))
     lista_donde.sort()
