@@ -1,5 +1,6 @@
 # https://www.usgs.gov/core-science-systems/nli/landsat/landsat-sr-derived-spectral-indices-pixel-quality-band
 # https://numpy.org/doc/stable/reference/generated/numpy.bitwise_and.html
+# python 3.x y 2x
 from osgeo import gdal
 import numpy as np
 
@@ -15,4 +16,5 @@ def cloud_values(ubicacion_qa_landsat):
     unicos = np.unique(qa.ReadAsArray())
     # los valores corresponden a nubes, sombras de nube ver url
     out = [True if((np.bitwise_and(unico, 5) and np.bitwise_and(unico,7)) or np.bitwise_and(unico,3)) else False for unico in unicos]
+    out = np.unique(unicos[out])
     return(out)
