@@ -5,3 +5,5 @@
 - hdf2array         : leer archivo hdf, para array, imagen columna, fila ts.
 - descomprime       : leer archivo y descomprimir, en carpeta.
 - gdal_metadata     : leer metadata desde ubicacion archivo
+- untar             : descomprime archivos tar.gz
+- mover_tipo_archivo: mueve desde origen a destino, tipos de archivos

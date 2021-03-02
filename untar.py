@@ -11,7 +11,7 @@ def descomprimir_todo(comprimido, directorio_salida):
     file.close()
 
 
-def descomprimir_todo(comprimido, directorio_salida):
-    """
-    """
-    
+# def descomprimir_todo(comprimido, directorio_salida):
+#     """
+#     """
+#
