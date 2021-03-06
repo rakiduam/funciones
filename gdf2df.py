@@ -14,6 +14,7 @@ def gdf2df(ubicacion_archivo):
                  sheet_name=(separa(ubicacion_archivo)[-1])[:-largo])
 
 # gdf2df('/home/fanr/SIG/PROCESANDO/datos_entrada/sampled_krig.shp')
+# gdf2df('/home/fanr/SIG/PROCESANDO/datos_entrada/sampled_krig_300.shp')
 
 # ubicacion_archivo = '/home/fanr/SIG/PROCESANDO/datos_entrada/sampled_krig.shp'
 # pathlib.Path(ubicacion_archivo).suffix
