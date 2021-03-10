@@ -5,10 +5,11 @@ Created on Mon Nov 23 11:13:01 2020
 @author: fneira
 """
 
-import pandas as pd
-import geopandas
 from pathlib import Path
-from os.path import split as separa
+
+import geopandas
+import pandas as pd
+
 
 def df2gdf(ubicacion_archivo_xls, col_x, col_y, sheet=None, na_values=None, crs_salida=None):
     """
@@ -33,8 +34,8 @@ def df2gdf(ubicacion_archivo_xls, col_x, col_y, sheet=None, na_values=None, crs_
                        na_values=str(na_values))
 
     gdf = geopandas.GeoDataFrame(df,
-                           geometry=geopandas.points_from_xy(df[col_x], df[col_y]),
-                           crs=crs_salida)
+                                 geometry=geopandas.points_from_xy(df[col_x], df[col_y]),
+                                 crs=crs_salida)
 
     largo = len(Path(ubicacion_archivo_xls).suffix)
 
